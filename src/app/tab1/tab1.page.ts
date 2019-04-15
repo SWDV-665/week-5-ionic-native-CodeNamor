@@ -133,4 +133,15 @@ export class Tab1Page {
 
     await alert.present();
   }
+
+  async shareItem(item, index) {
+    console.log("Sharing Item - ", item, index);
+    const toast = await this.toastCtrl.create({
+      message: 'Sharing Item - ' + index + " ...",
+      duration: 3000
+    });
+    toast.present();
+
+    this.items.splice(index, 1)
+  }
 }

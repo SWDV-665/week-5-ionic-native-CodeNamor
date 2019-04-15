@@ -27,6 +27,10 @@
           <ion-icon name="create"></ion-icon>
           Edit
         </ion-item-option>
+          <ion-item-option (click)="shareItem(item, i)" color="light">
+          <ion-icon name="Share"></ion-icon>
+          Share
+        </ion-item-option>
         <ion-item-option (click)="removeItem(item, i)" color="secondary">
           <ion-icon name="trash"></ion-icon>
         Delete</ion-item-option>
