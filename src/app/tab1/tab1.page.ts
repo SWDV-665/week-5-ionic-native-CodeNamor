@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import { ToastController } from '@ionic/angular';
+import { SocialSharing} from '@ionic-native/social-sharing/ngx';
 
 @Component({
   selector: 'app-tab1',
@@ -8,7 +9,7 @@ import { ToastController } from '@ionic/angular';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
-  constructor(public alertController: AlertController, public toastCtrl: ToastController) {}
+  constructor(public alertController: AlertController, public toastCtrl: ToastController, public socialSharing: SocialSharing) {}
 
   title = "Grocery";
 
@@ -142,6 +143,15 @@ export class Tab1Page {
     });
     toast.present();
 
-    this.items.splice(index, 1)
+    let message = "Grocery Item - Name : " + item.name + " - Quantity: " + item.quantity;
+    let subject = "Shared via Grocery App";
+    this.socialSharing.share(message, subject).then(() => {
+      // Sharing via email is possible
+      console.log("Shared Successfully!")
+    }).catch((error) => {
+      // Sharing via email is not possible
+      console.error("Error while sharing", error
+      )
+    });
   }
 }
