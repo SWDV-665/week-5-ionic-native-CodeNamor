@@ -23,6 +23,10 @@
 		E88AEB2B95A34910A7155DA8 /* IONAssetHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AF41A67BA2244E795E550D5 /* IONAssetHandler.m */; };
 		77E8F70ADE794343B6375A7F /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B4BD4B980D04E8485EAA8CC /* WebKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		19CC721EF550417FAE3E0943 /* CDVIonicKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2A309C5D49462E972CECFE /* CDVIonicKeyboard.m */; };
+		C1167D27FE654DEA92089300 /* NSString+SSURLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 51BCFA91197C4ADEBC14308C /* NSString+SSURLEncoding.m */; };
+		61D8FE7B4AC441E68922D7FC /* SocialSharing.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9CA64DFB8494382859A76 /* SocialSharing.m */; };
+		6657354C5EF44CBB8A974397 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03EED8B28DC146C5ADD027AC /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		5FC337CEAE594835825E0603 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E227CC2BED49CDB7A3CB0B /* MessageUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +93,12 @@
 		4B4BD4B980D04E8485EAA8CC /* WebKit.framework */ = {isa = PBXFileReference; name = "WebKit.framework"; path = "System/Library/Frameworks/WebKit.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		FC2A309C5D49462E972CECFE /* CDVIonicKeyboard.m */ = {isa = PBXFileReference; name = "CDVIonicKeyboard.m"; path = "cordova-plugin-ionic-keyboard/CDVIonicKeyboard.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 		48D0CA85877A433BB82DBE45 /* CDVIonicKeyboard.h */ = {isa = PBXFileReference; name = "CDVIonicKeyboard.h"; path = "cordova-plugin-ionic-keyboard/CDVIonicKeyboard.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		51BCFA91197C4ADEBC14308C /* NSString+SSURLEncoding.m */ = {isa = PBXFileReference; name = "NSString+SSURLEncoding.m"; path = "cordova-plugin-x-socialsharing/NSString+SSURLEncoding.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		4DB9CA64DFB8494382859A76 /* SocialSharing.m */ = {isa = PBXFileReference; name = "SocialSharing.m"; path = "cordova-plugin-x-socialsharing/SocialSharing.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		99AAF021C95144E6B909B782 /* NSString+SSURLEncoding.h */ = {isa = PBXFileReference; name = "NSString+SSURLEncoding.h"; path = "cordova-plugin-x-socialsharing/NSString+SSURLEncoding.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		AB754AD4968B47468B706D58 /* SocialSharing.h */ = {isa = PBXFileReference; name = "SocialSharing.h"; path = "cordova-plugin-x-socialsharing/SocialSharing.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		03EED8B28DC146C5ADD027AC /* Social.framework */ = {isa = PBXFileReference; name = "Social.framework"; path = "System/Library/Frameworks/Social.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		47E227CC2BED49CDB7A3CB0B /* MessageUI.framework */ = {isa = PBXFileReference; name = "MessageUI.framework"; path = "System/Library/Frameworks/MessageUI.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +108,8 @@
 			files = (
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
 				77E8F70ADE794343B6375A7F /* WebKit.framework in Frameworks */,
+				6657354C5EF44CBB8A974397 /* Social.framework in Frameworks */,
+				5FC337CEAE594835825E0603 /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +181,8 @@
 			isa = PBXGroup;
 			children = (
 				4B4BD4B980D04E8485EAA8CC /* WebKit.framework */,
+				03EED8B28DC146C5ADD027AC /* Social.framework */,
+				47E227CC2BED49CDB7A3CB0B /* MessageUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -213,6 +227,10 @@
 				D103F0B5F6044F82BEEB4F87 /* IONAssetHandler.h */,
 				FC2A309C5D49462E972CECFE /* CDVIonicKeyboard.m */,
 				48D0CA85877A433BB82DBE45 /* CDVIonicKeyboard.h */,
+				51BCFA91197C4ADEBC14308C /* NSString+SSURLEncoding.m */,
+				4DB9CA64DFB8494382859A76 /* SocialSharing.m */,
+				99AAF021C95144E6B909B782 /* NSString+SSURLEncoding.h */,
+				AB754AD4968B47468B706D58 /* SocialSharing.h */,
 			);
 			name = Plugins;
 			path = "MyApp/Plugins";
@@ -346,6 +364,8 @@
 				7A6B824D47BB478A8EC5BF86 /* CDVWKProcessPoolFactory.m in Sources */,
 				E88AEB2B95A34910A7155DA8 /* IONAssetHandler.m in Sources */,
 				19CC721EF550417FAE3E0943 /* CDVIonicKeyboard.m in Sources */,
+				C1167D27FE654DEA92089300 /* NSString+SSURLEncoding.m in Sources */,
+				61D8FE7B4AC441E68922D7FC /* SocialSharing.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
