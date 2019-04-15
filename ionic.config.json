@@ -1,6 +1,8 @@
 {
   "name": "groceries",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular",
   "id": "a13ad533"
 }
