@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import { ToastController } from '@ionic/angular';
+import { GroceriesServiceService } from '../groceries-service.service';
 import { SocialSharing} from '@ionic-native/social-sharing/ngx';
 
 @Component({
@@ -9,28 +10,13 @@ import { SocialSharing} from '@ionic-native/social-sharing/ngx';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
-  constructor(public alertController: AlertController, public toastCtrl: ToastController, public socialSharing: SocialSharing) {}
+  constructor(public alertController: AlertController, public toastCtrl: ToastController, public dataService: GroceriesServiceService, public socialSharing: SocialSharing) {}
 
   title = "Grocery";
 
-  items = [
-    {
-      name: "Milk",
-      quantity: "1"
-    },
-    {
-      name: "Eggs",
-      quantity: "Dozen"
-    },
-    {
-      name: "Orange Juice",
-      quantity: "1"
-    },
-    {
-      name: "Avacado",
-      quantity: "3"
-    },
-  ];
+  loadItem() {
+    return this.dataService.getItems();
+  }
 
   addItem() {
     console.log("Adding Item:")
@@ -65,7 +51,7 @@ export class Tab1Page {
           text: 'Ok',
           handler: item => {
             console.log('Confirm Ok', item);
-            this.items.push(item);
+            this.dataService.addItem(item)
           }
         }
       ]
@@ -82,7 +68,7 @@ export class Tab1Page {
     });
     toast.present();
 
-    this.items.splice(index, 1)
+    this.dataService.removeItem(index)
   }
 
   async editItem(item, index) {
@@ -126,7 +112,7 @@ export class Tab1Page {
           text: 'Ok',
           handler: item => {
             console.log('Confirm Ok', item);
-            this.items[index] = item;
+            this.dataService.editItem(item, index);
           }
         }
       ]
