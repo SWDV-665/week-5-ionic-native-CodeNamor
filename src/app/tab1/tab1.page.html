@@ -17,6 +17,9 @@
       <ion-list-header>
         <ion-label>Items to get: </ion-label>
       </ion-list-header>
+    <h3 text-center *ngIf="loadItem().length === 0">
+      No items on list!
+    </h3>
     <ion-item-sliding *ngFor="let item of loadItem(); let i = index">
       <ion-item>
         <ion-label>{{item.name}}</ion-label>
